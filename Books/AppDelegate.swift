@@ -15,8 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        
+        guard let nibs = Bundle.main.loadNibNamed("BooksViewController", owner: nil, options: nil),
+            let booksVC = nibs[0] as? BooksViewController else {
+                fatalError()
+        }
+        
+        let navigationController = UINavigationController(rootViewController: booksVC)
+        navigationController.isNavigationBarHidden = true
+        window?.rootViewController = navigationController
+        
+        window?.makeKeyAndVisible()
         return true
+        
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

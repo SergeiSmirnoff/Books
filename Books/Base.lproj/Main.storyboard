@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FfC-oR-Oen">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FfC-oR-Oen">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,6 +27,9 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Giu-FO-ReZ">
                                             <rect key="frame" x="270" y="3" width="102" height="113.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="102" id="Hjc-iT-vdU"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vM-Db-dbq">
                                             <rect key="frame" x="10" y="5" width="255" height="40"/>
@@ -52,7 +55,6 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="WO7-19-Bd1" firstAttribute="top" secondItem="0vM-Db-dbq" secondAttribute="bottom" constant="5" id="2SK-uf-xKT"/>
-                                        <constraint firstItem="Giu-FO-ReZ" firstAttribute="leading" secondItem="9S4-SE-6mh" secondAttribute="leading" constant="270" id="4Ts-Di-Yll"/>
                                         <constraint firstAttribute="trailing" secondItem="Giu-FO-ReZ" secondAttribute="trailing" constant="3" id="4WG-iV-uA2"/>
                                         <constraint firstItem="fRk-Lh-8Wj" firstAttribute="top" secondItem="WO7-19-Bd1" secondAttribute="bottom" constant="5" id="IjF-VK-bW5"/>
                                         <constraint firstItem="0vM-Db-dbq" firstAttribute="top" secondItem="9S4-SE-6mh" secondAttribute="top" constant="5" id="LHF-WE-MnI"/>
@@ -79,13 +81,11 @@
                             <outlet property="delegate" destination="FfC-oR-Oen" id="e3J-lg-v2d"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="booksTableView" destination="Qv3-x0-seu" id="wV4-dC-4gP"/>
-                    </connections>
+                    <size key="freeformSize" width="375" height="667"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfm-qy-Ntg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-631.20000000000005" y="58.920539730134934"/>
+            <point key="canvasLocation" x="-550" y="49"/>
         </scene>
     </scenes>
 </document>
