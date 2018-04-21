@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FfC-oR-Oen">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Books Table View Controller-->
+        <scene sceneID="fjF-BU-pcG">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="FfC-oR-Oen" customClass="BooksTableViewController" customModule="Books" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qv3-x0-seu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="iYg-oD-fOA" customClass="BooksTableViewCell" customModule="Books" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iYg-oD-fOA" id="9S4-SE-6mh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Giu-FO-ReZ">
+                                            <rect key="frame" x="270" y="3" width="102" height="113.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vM-Db-dbq">
+                                            <rect key="frame" x="10" y="5" width="255" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="D8b-dp-jZ9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO7-19-Bd1">
+                                            <rect key="frame" x="10" y="50" width="255" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Год издания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRk-Lh-8Wj">
+                                            <rect key="frame" x="10" y="76" width="255" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WO7-19-Bd1" firstAttribute="top" secondItem="0vM-Db-dbq" secondAttribute="bottom" constant="5" id="2SK-uf-xKT"/>
+                                        <constraint firstItem="Giu-FO-ReZ" firstAttribute="leading" secondItem="9S4-SE-6mh" secondAttribute="leading" constant="270" id="4Ts-Di-Yll"/>
+                                        <constraint firstAttribute="trailing" secondItem="Giu-FO-ReZ" secondAttribute="trailing" constant="3" id="4WG-iV-uA2"/>
+                                        <constraint firstItem="fRk-Lh-8Wj" firstAttribute="top" secondItem="WO7-19-Bd1" secondAttribute="bottom" constant="5" id="IjF-VK-bW5"/>
+                                        <constraint firstItem="0vM-Db-dbq" firstAttribute="top" secondItem="9S4-SE-6mh" secondAttribute="top" constant="5" id="LHF-WE-MnI"/>
+                                        <constraint firstItem="Giu-FO-ReZ" firstAttribute="leading" secondItem="fRk-Lh-8Wj" secondAttribute="trailing" constant="5" id="RS1-Db-Ay3"/>
+                                        <constraint firstItem="fRk-Lh-8Wj" firstAttribute="leading" secondItem="9S4-SE-6mh" secondAttribute="leading" constant="10" id="Szg-Ys-7WW"/>
+                                        <constraint firstItem="WO7-19-Bd1" firstAttribute="leading" secondItem="9S4-SE-6mh" secondAttribute="leading" constant="10" id="WhT-0Q-m42"/>
+                                        <constraint firstItem="Giu-FO-ReZ" firstAttribute="leading" secondItem="0vM-Db-dbq" secondAttribute="trailing" constant="5" id="aVx-Rs-Kdc"/>
+                                        <constraint firstAttribute="bottom" secondItem="Giu-FO-ReZ" secondAttribute="bottom" constant="3" id="bjw-Vk-4ix"/>
+                                        <constraint firstItem="Giu-FO-ReZ" firstAttribute="leading" secondItem="WO7-19-Bd1" secondAttribute="trailing" constant="5" id="fVe-sq-4xG"/>
+                                        <constraint firstItem="Giu-FO-ReZ" firstAttribute="top" secondItem="9S4-SE-6mh" secondAttribute="top" constant="3" id="wGX-uM-NMu"/>
+                                        <constraint firstItem="0vM-Db-dbq" firstAttribute="leading" secondItem="9S4-SE-6mh" secondAttribute="leading" constant="10" id="xBs-dm-Ra8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookAuther" destination="WO7-19-Bd1" id="0Bt-Hg-xVz"/>
+                                    <outlet property="bookImage" destination="Giu-FO-ReZ" id="38N-42-sgQ"/>
+                                    <outlet property="bookTitle" destination="0vM-Db-dbq" id="ifv-a4-frh"/>
+                                    <outlet property="bookYearOfPublishing" destination="fRk-Lh-8Wj" id="zii-n3-hEw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FfC-oR-Oen" id="aDA-5l-sj6"/>
+                            <outlet property="delegate" destination="FfC-oR-Oen" id="e3J-lg-v2d"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="booksTableView" destination="Qv3-x0-seu" id="wV4-dC-4gP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nfm-qy-Ntg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-631.20000000000005" y="58.920539730134934"/>
         </scene>
     </scenes>
 </document>
